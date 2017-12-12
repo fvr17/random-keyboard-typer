@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BREAK_INDEXES = [10, 19];
+const BREAK_INDEXES = [10, 20];
 
 function insertBreaks(array) {
   BREAK_INDEXES.forEach( brIndex =>
