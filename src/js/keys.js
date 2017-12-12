@@ -24,10 +24,11 @@ function randomInt(max, min = 0) {
 
 export function shuffleKeys(keys) {
   let res = shallowClone(keys);
+
   let resKeys = Object.keys( shallowClone(keys) );
-  
-  resKeys.forEach( key =>
-    swapValues( res, key, randomInt(resKeys.length) )
+
+  resKeys.forEach( (key, index) =>
+    swapValues( res, key, resKeys[randomInt(resKeys.length)] )
   );
 
   return res;
