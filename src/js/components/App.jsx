@@ -1,7 +1,7 @@
 import React from 'react';
 import KeyboardDisplay from 'app/components/KeyboardDisplay.jsx';
-import { DEFAULT_KEYS, shuffleKeys } from 'app/keys.js';
 import MainInput from 'app/components/MainInput.jsx';
+import { DEFAULT_KEYS, shuffleKeys } from 'app/keys.js';
 import { bind } from 'app/utils.js';
 
 export default class App extends React.Component {

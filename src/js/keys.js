@@ -1,9 +1,9 @@
 const KEYS = 'qwertyuiopasdfghjklzxcvbnm'.split('');
 
 export const DEFAULT_KEYS = KEYS.reduce( (acc, key) => {
-    acc[key] = key;
-    return acc;
-  }, {} );
+  acc[key] = key;
+  return acc;
+}, {} );
 
 function swapValues(obj, key1, key2) {
   let tmp = obj[key1];
@@ -24,13 +24,11 @@ function randomInt(max, min = 0) {
 
 export function shuffleKeys(keys) {
   let res = shallowClone(keys);
-
-  let resKeys = Object.keys( shallowClone(keys) )
-
-  resKeys.forEach( (key, index) => {
-    let swapIndex = randomInt(resKeys.length);
-    swapValues(res, key, resKeys[swapIndex]);
-  } );
+  let resKeys = Object.keys( shallowClone(keys) );
+  
+  resKeys.forEach( key =>
+    swapValues( res, key, randomInt(resKeys.length) )
+  );
 
   return res;
 }

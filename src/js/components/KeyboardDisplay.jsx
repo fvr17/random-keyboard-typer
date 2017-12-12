@@ -21,7 +21,7 @@ export default class KeyboardDisplay extends React.Component {
     return <div className='keyboard-display'>
       {
         insertBreaks(
-            Object.entries(keys).map( ([key, value]) => <div
+          Object.entries(keys).map( ([key, value]) => <div
             key={key}
             className='keyboard-display__key'
           > {value}
