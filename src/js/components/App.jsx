@@ -17,9 +17,12 @@ export default class App extends React.Component {
   }
   handleInputChange(event) {
     let str = event.target.value;
-    let keys = this.state.keys;
+    let {
+      keys,
+      inputValue
+    } = this.state;
 
-    if( str.length > 0 ) {
+    if( str.length > inputValue.length ) {
       let last = str[str.length-1];
       last = last.toLowerCase();
       if( keys[last] !== undefined ) {
