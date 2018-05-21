@@ -23,3 +23,9 @@ html, body {
   margin: 1px;
   padding: 1px 3px;
 }
+
+.main-image {
+  display: block;
+  margin: 0 auto;
+  height: 75vh;
+}

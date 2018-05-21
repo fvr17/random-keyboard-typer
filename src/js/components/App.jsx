@@ -48,6 +48,8 @@ export default class App extends React.Component {
     return <div className='app'>
       <MainInput value={inputValue} onChange={this.handleInputChange}/>
       <KeyboardDisplay keys={keys}/>  
+
+      <img className='main-image' src='pic.jpg'/>
     </div>;
   }
 }
